@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Matplotlib & Seaborn | Abhishek Tiwari</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Abhishek Tiwari</div>
+
+            <a href="../index.html" class="blog-home">
+                ← Back to Portfolio
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- Blog Post -->
+    <section class="blog-post">
+
+        <p class="blog-type">DATA VISUALIZATION</p>
+
+        <h1>Learning Matplotlib & Seaborn</h1>
+
+        <p class="blog-date">
+            Python • Matplotlib • Seaborn • Data Visualization
+        </p>
+
+        <hr>
+
+
+        <!-- Introduction -->
+        <h2>Introduction</h2>
+
+        <p>
+            Data visualization is an important part of data analysis.
+            It helps us understand patterns, trends and relationships
+            in a dataset through charts and graphs.
+        </p>
+
+        <p>
+            During my Data Analysis learning journey, I started using
+            Matplotlib and Seaborn to create different types of
+            visualizations using Python.
+        </p>
+
+
+        <!-- Matplotlib -->
+        <h2>What is Matplotlib?</h2>
+
+        <p>
+            Matplotlib is a popular Python library used to create
+            charts and graphs. It can be used to create line charts,
+            bar charts, histograms, scatter plots and many other
+            visualizations.
+        </p>
+
+
+        <!-- Import -->
+        <h2>Importing Matplotlib</h2>
+
+        <pre><code>
+import matplotlib.pyplot as plt
+        </code></pre>
+
+
+        <!-- Line Chart -->
+        <h2>Creating a Line Chart</h2>
+
+        <p>
+            A line chart can be used to show changes or trends over
+            time.
+        </p>
+
+        <pre><code>
+import matplotlib.pyplot as plt
+
+months = [1, 2, 3, 4]
+sales = [1000, 1500, 1200, 1800]
+
+plt.plot(months, sales)
+
+plt.title("Monthly Sales")
+plt.xlabel("Month")
+plt.ylabel("Sales")
+
+plt.show()
+        </code></pre>
+
+
+        <!-- Bar Chart -->
+        <h2>Bar Chart</h2>
+
+        <p>
+            Bar charts are useful for comparing different categories.
+        </p>
+
+        <pre><code>
+import matplotlib.pyplot as plt
+
+products = ["A", "B", "C", "D"]
+sales = [100, 150, 120, 180]
+
+plt.bar(products, sales)
+
+plt.title("Product Sales")
+plt.xlabel("Products")
+plt.ylabel("Sales")
+
+plt.show()
+        </code></pre>
+
+
+        <!-- Histogram -->
+        <h2>Histogram</h2>
+
+        <p>
+            A histogram helps us understand the distribution of
+            numerical data.
+        </p>
+
+        <pre><code>
+plt.hist(data["Age"], bins=10)
+
+plt.title("Age Distribution")
+plt.xlabel("Age")
+plt.ylabel("Frequency")
+
+plt.show()
+        </code></pre>
+
+
+        <!-- Seaborn -->
+        <h2>What is Seaborn?</h2>
+
+        <p>
+            Seaborn is a Python visualization library built on top
+            of Matplotlib. It provides a simple way to create
+            attractive and informative statistical visualizations.
+        </p>
+
+
+        <!-- Import Seaborn -->
+        <h2>Importing Seaborn</h2>
+
+        <pre><code>
+import seaborn as sns
+        </code></pre>
+
+
+        <!-- Distribution Plot -->
+        <h2>Distribution Plot</h2>
+
+        <p>
+            Seaborn can be used to visualize the distribution of
+            numerical data.
+        </p>
+
+        <pre><code>
+sns.displot(data=data, x="Age", kde=True)
+
+plt.show()
+        </code></pre>
+
+
+        <!-- Histogram -->
+        <h2>Histogram using Seaborn</h2>
+
+        <pre><code>
+sns.histplot(data=data, x="Sales", kde=True)
+
+plt.show()
+        </code></pre>
+
+
+        <!-- Relationship -->
+        <h2>Relationship Between Variables</h2>
+
+        <p>
+            The relplot() function can help visualize the relationship
+            between two variables.
+        </p>
+
+        <pre><code>
+sns.relplot(
+    x="TV",
+    y="Sales",
+    data=data
+)
+
+plt.show()
+        </code></pre>
+
+
+        <!-- Pairplot -->
+        <h2>Pairplot</h2>
+
+        <p>
+            A pairplot is useful for understanding relationships
+            between multiple numerical columns in a dataset.
+        </p>
+
+        <pre><code>
+sns.pairplot(data)
+
+plt.show()
+        </code></pre>
+
+
+        <!-- Heatmap -->
+        <h2>Heatmap</h2>
+
+        <p>
+            A heatmap can be used to visualize correlations between
+            numerical variables.
+        </p>
+
+        <pre><code>
+sns.heatmap(
+    data.corr(),
+    annot=True
+)
+
+plt.show()
+        </code></pre>
+
+
+        <!-- Project -->
+        <h2>My Data Visualization Practice</h2>
+
+        <p>
+            I practiced Matplotlib and Seaborn while working with
+            datasets for Data Analysis. I created different charts
+            to understand the data and identify useful patterns.
+        </p>
+
+        <p>
+            Some of the visualizations I practiced include:
+        </p>
+
+        <ul>
+            <li>Line charts</li>
+            <li>Bar charts</li>
+            <li>Histograms</li>
+            <li>Scatter plots</li>
+            <li>Distribution plots</li>
+            <li>Pairplots</li>
+            <li>Correlation heatmaps</li>
+        </ul>
+
+
+        <!-- Learning -->
+        <h2>What I Learned</h2>
+
+        <p>
+            Working with Matplotlib and Seaborn helped me understand
+            how visualization can make data easier to explore and
+            communicate.
+        </p>
+
+        <p>
+            I also learned how to choose different charts depending
+            on the type of data and the question I want to answer.
+        </p>
+
+
+        <!-- Conclusion -->
+        <h2>Conclusion</h2>
+
+        <p>
+            Matplotlib and Seaborn are useful tools for anyone
+            learning Python for Data Analysis. They helped me turn
+            raw data into visual information that is easier to
+            understand.
+        </p>
+
+        <p>
+            I continue to practice these libraries while working on
+            different Data Analysis projects.
+        </p>
+
+
+        <!-- Navigation Buttons -->
+        <div class="blog-navigation">
+
+            <a href="../index.html#blog" class="blog-btn">
+                ← Back to Blogs
+            </a>
+
+            <a href="../index.html#projects" class="blog-btn">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Abhishek Tiwari. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

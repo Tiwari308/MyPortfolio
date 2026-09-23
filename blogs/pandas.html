@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction to Pandas | Abhishek Tiwari</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Abhishek Tiwari</div>
+
+            <a href="../index.html" class="blog-home">
+                ← Back to Portfolio
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- Blog Post -->
+    <section class="blog-post">
+
+        <p class="blog-type">DATA ANALYSIS</p>
+
+        <h1>Introduction to Pandas</h1>
+
+        <p class="blog-date">
+            Python • Pandas • Data Analysis
+        </p>
+
+        <hr>
+
+
+        <!-- Introduction -->
+        <h2>Introduction</h2>
+
+        <p>
+            Pandas is one of the most popular Python libraries used
+            for data analysis and data manipulation. It makes it
+            easier to work with structured data such as CSV files,
+            Excel files and database tables.
+        </p>
+
+        <p>
+            I started learning Pandas as part of my journey toward
+            becoming a Data Analyst. It helped me understand how to
+            load, clean, analyze and organize datasets using Python.
+        </p>
+
+
+        <!-- What is Pandas -->
+        <h2>What is Pandas?</h2>
+
+        <p>
+            Pandas provides two important data structures:
+        </p>
+
+        <ul>
+            <li><strong>Series</strong> – A one-dimensional data structure.</li>
+            <li><strong>DataFrame</strong> – A two-dimensional table-like data structure.</li>
+        </ul>
+
+
+        <!-- Creating DataFrame -->
+        <h2>Creating a DataFrame</h2>
+
+        <p>
+            A DataFrame can be created using a Python dictionary:
+        </p>
+
+        <pre><code>
+import pandas as pd
+
+data = {
+    "Name": ["Gopal", "Raju", "Amit"],
+    "Age": [22, 25, 24],
+    "City": ["Mumbai", "Pune", "Delhi"]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+        </code></pre>
+
+
+        <!-- Reading CSV -->
+        <h2>Reading a CSV File</h2>
+
+        <p>
+            One of the most common tasks in data analysis is reading
+            data from a CSV file.
+        </p>
+
+        <pre><code>
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+
+print(df)
+        </code></pre>
+
+
+        <!-- Head and Tail -->
+        <h2>head() and tail()</h2>
+
+        <p>
+            The <strong>head()</strong> function displays the first
+            few rows of a dataset.
+        </p>
+
+        <pre><code>
+df.head()
+        </code></pre>
+
+        <p>
+            The <strong>tail()</strong> function displays the last
+            few rows.
+        </p>
+
+        <pre><code>
+df.tail()
+        </code></pre>
+
+
+        <!-- Information -->
+        <h2>Understanding Dataset Information</h2>
+
+        <p>
+            The <strong>info()</strong> function provides useful
+            information about columns, data types and missing values.
+        </p>
+
+        <pre><code>
+df.info()
+        </code></pre>
+
+
+        <!-- Describe -->
+        <h2>Using describe()</h2>
+
+        <p>
+            The <strong>describe()</strong> function provides
+            statistical information such as count, mean, standard
+            deviation, minimum and maximum values.
+        </p>
+
+        <pre><code>
+df.describe()
+        </code></pre>
+
+
+        <!-- Missing Values -->
+        <h2>Checking Missing Values</h2>
+
+        <p>
+            Missing values are common in real-world datasets.
+            Pandas provides simple functions to identify them.
+        </p>
+
+        <pre><code>
+df.isnull().sum()
+        </code></pre>
+
+        <p>
+            This shows the number of missing values in each column.
+        </p>
+
+
+        <!-- Filtering -->
+        <h2>Filtering Data</h2>
+
+        <p>
+            Pandas allows us to filter rows based on conditions.
+        </p>
+
+        <pre><code>
+df[df["Age"] > 23]
+        </code></pre>
+
+
+        <!-- GroupBy -->
+        <h2>GroupBy</h2>
+
+        <p>
+            The <strong>groupby()</strong> function is useful when
+            we want to summarize data based on a particular column.
+        </p>
+
+        <pre><code>
+df.groupby("City")["Age"].mean()
+        </code></pre>
+
+
+        <!-- Project -->
+        <h2>My Data Analysis Project</h2>
+
+        <p>
+            I used Pandas while working on my Bank Marketing Data
+            Cleaning project. I worked with a real-world dataset
+            and performed different data cleaning and analysis tasks.
+        </p>
+
+        <p>
+            Some of the tasks included:
+        </p>
+
+        <ul>
+            <li>Loading the dataset</li>
+            <li>Checking missing values</li>
+            <li>Finding duplicate records</li>
+            <li>Cleaning incorrect values</li>
+            <li>Handling outliers</li>
+            <li>Preparing data for analysis</li>
+            <li>Creating visualizations</li>
+        </ul>
+
+
+        <!-- Learning -->
+        <h2>What I Learned</h2>
+
+        <p>
+            Learning Pandas helped me understand how data can be
+            cleaned and transformed before performing analysis.
+            It also gave me practical experience working with
+            real-world datasets.
+        </p>
+
+
+        <!-- Conclusion -->
+        <h2>Conclusion</h2>
+
+        <p>
+            Pandas is an important tool for anyone learning Python
+            for Data Analysis. It provides simple and powerful
+            functions for working with structured data.
+        </p>
+
+        <p>
+            My next step was learning data visualization using
+            libraries such as Matplotlib and Seaborn.
+        </p>
+
+
+        <!-- Buttons -->
+        <div class="blog-navigation">
+
+            <a href="../index.html#blog" class="blog-btn">
+                ← Back to Blogs
+            </a>
+
+            <a href="../index.html#projects" class="blog-btn">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Abhishek Tiwari. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
