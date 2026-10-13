@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning NumPy | Abhishek Tiwari</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Abhishek Tiwari</div>
+
+            <a href="../index.html" class="blog-home">
+                ← Back to Portfolio
+            </a>
+        </nav>
+    </header>
+
+    <!-- Blog Post -->
+    <section class="blog-post">
+
+        <p class="blog-type">PYTHON • DATA ANALYSIS</p>
+
+        <h1>Learning NumPy in Python</h1>
+
+        <p class="blog-date">
+            Python • NumPy • Arrays • Data Analysis
+        </p>
+
+        <hr>
+
+        <!-- Introduction -->
+        <h2>Introduction</h2>
+
+        <p>
+            NumPy is one of the most important Python libraries
+            for numerical computing and data analysis. It helps
+            us perform mathematical operations efficiently and
+            work with large amounts of numerical data.
+        </p>
+
+        <p>
+            During my Data Analysis learning journey, I started
+            learning NumPy to understand arrays, mathematical
+            operations, indexing, slicing and other important
+            concepts used in data analysis.
+        </p>
+
+        <!-- What is NumPy -->
+        <h2>What is NumPy?</h2>
+
+        <p>
+            NumPy stands for Numerical Python. It is an open-source
+            Python library that provides support for multidimensional
+            arrays and mathematical functions.
+        </p>
+
+        <p>
+            NumPy arrays make it easier to perform calculations on
+            multiple values without writing separate operations
+            for every element.
+        </p>
+
+        <!-- Why NumPy -->
+        <h2>Why Do We Use NumPy?</h2>
+
+        <p>
+            NumPy is widely used in Data Analysis, Data Science,
+            Machine Learning and scientific computing.
+        </p>
+
+        <ul>
+            <li>Perform numerical calculations efficiently.</li>
+            <li>Create and manipulate arrays.</li>
+            <li>Calculate sum, mean, minimum and maximum values.</li>
+            <li>Access and filter array elements.</li>
+            <li>Work with multidimensional data.</li>
+            <li>Support libraries such as Pandas and Scikit-learn.</li>
+        </ul>
+
+        <!-- Installation -->
+        <h2>Installing NumPy</h2>
+
+        <p>
+            If NumPy is not installed in your Python environment,
+            you can install it using pip.
+        </p>
+
+        <pre><code>
+pip install numpy
+        </code></pre>
+
+        <!-- Import -->
+        <h2>Importing NumPy</h2>
+
+        <p>
+            After installing NumPy, import it into your Python
+            program. The alias <strong>np</strong> is commonly
+            used as a short name for NumPy.
+        </p>
+
+        <pre><code>
+import numpy as np
+        </code></pre>
+
+        <!-- Creating Array -->
+        <h2>Creating a NumPy Array</h2>
+
+        <p>
+            The array() function converts a Python list into
+            a NumPy array.
+        </p>
+
+        <pre><code>
+import numpy as np
+
+numbers = np.array([10, 20, 30, 40, 50])
+
+print(numbers)
+        </code></pre>
+
+        <p>Output:</p>
+
+        <pre><code>
+[10 20 30 40 50]
+        </code></pre>
+
+        <p>
+            In this example, we created a one-dimensional array
+            containing five numbers.
+        </p>
+
+        <!-- List vs Array -->
+        <h2>Python List vs NumPy Array</h2>
+
+        <p>
+            Python lists and NumPy arrays both store multiple
+            values, but their multiplication behavior is different.
+        </p>
+
+        <pre><code>
+import numpy as np
+
+numbers = [1, 2, 3]
+arr = np.array([1, 2, 3])
+
+print(numbers * 2)
+print(arr * 2)
+        </code></pre>
+
+        <p>Output:</p>
+
+        <pre><code>
+[1, 2, 3, 1, 2, 3]
+[2 4 6]
+        </code></pre>
+
+        <p>
+            Multiplying a Python list by 2 repeats the list.
+            Multiplying a NumPy array by 2 multiplies every
+            element by 2.
+        </p>
+
+        <!-- Array Properties -->
+        <h2>NumPy Array Properties</h2>
+
+        <p>
+            NumPy provides useful properties to understand the
+            structure and data type of an array.
+        </p>
+
+        <pre><code>
+import numpy as np
+
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+print("Dimensions:", arr.ndim)
+print("Shape:", arr.shape)
+print("Size:", arr.size)
+print("Data Type:", arr.dtype)
+        </code></pre>
+
+        <p>Output:</p>
+
+        <pre><code>
+Dimensions: 2
+Shape: (2, 3)
+Size: 6
+Data Type: int64
+        </code></pre>
+
+        <p>
+            The exact integer data type may vary depending on
+            the platform and how the array is created.
+        </p>
+
+        <ul>
+            <li><strong>ndim:</strong> Returns the number of dimensions.</li>
+            <li><strong>shape:</strong> Returns the number of rows and columns.</li>
+            <li><strong>size:</strong> Returns the total number of elements.</li>
+            <li><strong>dtype:</strong> Returns the data type of the elements.</li>
+        </ul>
+
+        <!-- Mathematical Operations -->
+        <h2>Mathematical Operations in NumPy</h2>
+
+        <p>
+            NumPy provides built-in functions to perform common
+            mathematical calculations on arrays.
+        </p>
+
+        <pre><code>
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print("Sum:", np.sum(arr))
+print("Mean:", np.mean(arr))
+print("Minimum:", np.min(arr))
+print("Maximum:", np.max(arr))
+print("Standard Deviation:", np.std(arr))
+        </code></pre>
+
+        <p>Output:</p>
+
+        <pre><code>
+Sum: 150
+Mean: 30.0
+Minimum: 10
+Maximum: 50
+Standard Deviation: 14.142135623730951
+        </code></pre>
+
+        <p>
+            These functions are useful for understanding
+            numerical data and calculating basic statistics.
+        </p>
+
+        <!-- Indexing -->
+        <h2>Indexing in NumPy</h2>
+
+        <p>
+            Indexing allows us to access individual elements
+            of an array. NumPy indexing starts from zero.
+        </p>
+
+        <pre><code>
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print(arr[0])
+print(arr[2])
+print(arr[-1])
+        </code></pre>
+
+        <p>Output:</p>
+
+        <pre><code>
+10
+30
+50
+        </code></pre>
+
+        <!-- Slicing -->
+        <h2>Slicing in NumPy</h2>
+
+        <p>
+            Slicing allows us to select a portion of an array
+            using a start index and an end index. The end index
+            is excluded.
+        </p>
+
+        <pre><code>
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print(arr[1:4])
+        </code></pre>
+
+        <p>Output:</p>
+
+        <pre><code>
+[20 30 40]
+        </code></pre>
+
+        <!-- Reshaping -->
+        <h2>Reshaping an Array</h2>
+
+        <p>
+            The reshape() function changes the shape of an array
+            without changing its data. The new shape must contain
+            the same total number of elements.
+        </p>
+
+        <pre><code>
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+new_arr = arr.reshape(2, 3)
+
+print(new_arr)
+        </code></pre>
+
+        <p>Output:</p>
+
+        <pre><code>
+[[1 2 3]
+ [4 5 6]]
+        </code></pre>
+
+        <!-- Filtering -->
+        <h2>Filtering Array Elements</h2>
+
+        <p>
+            We can use a condition to select specific elements
+            from a NumPy array.
+        </p>
+
+        <pre><code>
+import numpy as np
+
+arr = np.array([10, 15, 20, 25, 30])
+
+result = arr[arr > 20]
+
+print(result)
+        </code></pre>
+
+        <p>Output:</p>
+
+        <pre><code>
+[25 30]
+        </code></pre>
+
+        <p>
+            This example selects only the elements greater than 20.
+            Conditional filtering is useful when working with
+            datasets.
+        </p>
+
+        <!-- Where NumPy is Used -->
+        <h2>Applications of NumPy</h2>
+
+        <p>
+            NumPy is used in many areas of programming and
+            data-related work, including:
+        </p>
+
+        <ul>
+            <li>Data Analysis and Data Science</li>
+            <li>Machine Learning</li>
+            <li>Statistical calculations</li>
+            <li>Scientific computing</li>
+            <li>Image processing</li>
+            <li>Numerical data processing</li>
+        </ul>
+
+        <!-- Learning -->
+        <h2>What I Learned</h2>
+
+        <p>
+            Learning NumPy helped me understand how to create
+            arrays, access elements, perform mathematical
+            operations and work with numerical data efficiently.
+        </p>
+
+        <p>
+            These concepts are important for my Data Analysis
+            learning journey and provide a foundation for working
+            with libraries such as Pandas, Matplotlib and
+            Scikit-learn.
+        </p>
+
+        <!-- Conclusion -->
+        <h2>Conclusion</h2>
+
+        <p>
+            NumPy is an essential Python library for numerical
+            computing. Its arrays and built-in functions make
+            mathematical operations easier and more efficient.
+        </p>
+
+        <p>
+            I will continue practising NumPy and applying these
+            concepts to real-world datasets and Data Analysis
+            projects.
+        </p>
+
+        <!-- Navigation Buttons -->
+        <div class="blog-navigation">
+
+            <a href="../index.html#blog" class="blog-btn">
+                ← Back to Blogs
+            </a>
+
+            <a href="../index.html#projects" class="blog-btn">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Abhishek Tiwari. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

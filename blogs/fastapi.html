@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning FastAPI | Abhishek Tiwari</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Abhishek Tiwari</div>
+
+            <a href="../index.html" class="blog-home">
+                ← Back to Portfolio
+            </a>
+        </nav>
+    </header>
+
+    <!-- Blog Post -->
+    <section class="blog-post">
+
+        <p class="blog-type">PYTHON • API DEVELOPMENT</p>
+
+        <h1>Learning FastAPI</h1>
+
+        <p class="blog-date">
+            Python • FastAPI • REST API
+        </p>
+
+        <hr>
+
+        <!-- Introduction -->
+        <h2>Introduction</h2>
+
+        <p>
+            FastAPI is a modern Python framework used to build APIs.
+            During my Python learning journey, I started learning
+            FastAPI to understand how APIs work and how applications
+            communicate with each other.
+        </p>
+
+        <!-- What is FastAPI -->
+        <h2>What is FastAPI?</h2>
+
+        <p>
+            FastAPI is used to create APIs quickly and efficiently.
+            It supports data validation and automatic API documentation.
+        </p>
+
+        <!-- Installation -->
+        <h2>Installing FastAPI</h2>
+
+        <p>
+            We can install FastAPI using pip.
+        </p>
+
+        <pre><code>
+pip install "fastapi[standard]"
+        </code></pre>
+
+        <!-- First API -->
+        <h2>Creating My First API</h2>
+
+        <p>
+            Create a file named main.py and write the following code.
+        </p>
+
+        <pre><code>
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Hello, World!"}
+        </code></pre>
+
+        <p>
+            Here, FastAPI creates an application, and the GET
+            endpoint returns a simple JSON response.
+        </p>
+
+        <!-- Run API -->
+        <h2>Running the API</h2>
+
+        <p>
+            Run the following command in the terminal.
+        </p>
+
+        <pre><code>
+python -m uvicorn main:app --reload
+        </code></pre>
+
+        <p>
+            Open http://127.0.0.1:8000 in your browser to see
+            the response.
+        </p>
+
+        <p>
+            We can also test our API using the automatic
+            documentation at http://127.0.0.1:8000/docs.
+        </p>
+
+        <!-- Learning -->
+        <h2>What I Learned</h2>
+
+        <ul>
+            <li>API fundamentals and REST API concepts.</li>
+            <li>Creating API endpoints using FastAPI.</li>
+            <li>Understanding HTTP methods.</li>
+            <li>Working with request data and JSON responses.</li>
+            <li>Using Pydantic for data validation.</li>
+        </ul>
+
+        <!-- Project -->
+        <h2>My Practice Project</h2>
+
+        <p>
+            I also started working on a House Price Prediction API
+            using Python, FastAPI and machine learning. This project
+            helped me understand how an API can be used to provide
+            predictions from a trained model.
+        </p>
+
+        <!-- Conclusion -->
+        <h2>Conclusion</h2>
+
+        <p>
+            Learning FastAPI helped me understand the basics of API
+            development in Python. I will continue practising by
+            building APIs and working on real-world projects.
+        </p>
+
+        <!-- Navigation -->
+        <div class="blog-navigation">
+
+            <a href="../index.html#blog" class="blog-btn">
+                ← Back to Blogs
+            </a>
+
+            <a href="../index.html#projects" class="blog-btn">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Abhishek Tiwari. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
